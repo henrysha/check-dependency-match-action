@@ -9,6 +9,8 @@ try {
 
   const packages = core.getInput('packages') || []
 
+  if (typeof packages === 'string') throw new Error('packages must be array')
+
   packages.forEach((package) => {
     const packageA = dirAConfig.dependencies[package]
     const packageB = dirBConfig.dependencies[package]
