@@ -7,11 +7,7 @@ try {
   const dirAConfig = require(`${dirA}/package.json`)
   const dirBConfig = require(`${dirB}/package.json`)
 
-  const packages =
-    core
-      .getInput('packages')
-      .split(',')
-      .map((package) => package.trim()) || []
+  const packages = core.getInput('packages') || []
 
   packages.forEach((package) => {
     const packageA = dirAConfig.dependencies[package]

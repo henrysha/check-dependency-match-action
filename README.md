@@ -15,13 +15,13 @@ jobs:
       - name: Check Dependency Match
         uses: henrysha/check-dependency-match-action@v1
         with:
-          dirA: { { path_to_package } }
-          dirB: { { path_to_package } }
-          packages: { { package_to_check_version_match } }
+          dirA: { path_to_package }
+          dirB: { path_to_package }
+          packages: [{ package_to_check_version_match }]
 ```
 
 ### Inputs
 
 - `dirA`: path to package to check for dependency version
 - `dirB`: path to package to check for dependency version
-- `packages`: dependency names to check for version match. _split with comma (,) for multiple dependencies check_
+- `packages`: dependency names to check for version match. wrap into array.
