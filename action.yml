@@ -1,0 +1,17 @@
+name: Check Dependency Match
+description: Check if dependency matches between two packages
+author: Seong Wook Ha (Henry) (seongwook.ha@navercorp.com)
+inputs:
+  dirA:
+    description: 'Package Directory to check dependency'
+    required: true
+  dirB:
+    description: 'Package Directory to check dependency'
+    required: true
+  packages:
+    description: 'Packages to check version. split with commas for multiple packages'
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'main.js'

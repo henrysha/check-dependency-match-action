@@ -1,0 +1,28 @@
+{
+  "name": "check-dependency-match-action",
+  "version": "1.0.0",
+  "description": "check if dependency matches between two directories",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrysha/check-dependency-match-action.git"
+  },
+  "keywords": [
+    "dependency",
+    "match",
+    "action",
+    "github"
+  ],
+  "author": "Seong Wook Ha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henrysha/check-dependency-match-action/issues"
+  },
+  "homepage": "https://github.com/henrysha/check-dependency-match-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0"
+  }
+}
