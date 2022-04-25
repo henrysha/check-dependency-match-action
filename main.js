@@ -1,12 +1,16 @@
 const core = require('@actions/core')
 const parser = require('action-input-parser')
+const fs = require('fs')
 
 try {
   const dirA = core.getInput('dirA')
   const dirB = core.getInput('dirB')
 
-  const dirAConfig = require(`${dirA}/package.json`)
-  const dirBConfig = require(`${dirB}/package.json`)
+  const dirAConfigFile = fs.readFileSync(`${dirA}/package.json`)
+  const dirAConfig = JSON.parse(dirAConfigFile)
+
+  const dirBConfigFile = fs.readFileSync(`${dirB}/package.json`)
+  const dirBConfig = JSON.parse(dirBConfigFile)
 
   const packages = parser.getInput('packages', { type: 'array' }) || []
 
