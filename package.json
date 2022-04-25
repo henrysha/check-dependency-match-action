@@ -1,6 +1,6 @@
 {
   "name": "check-dependency-match-action",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "check if dependency matches between two directories",
   "main": "main.js",
   "scripts": {
