@@ -13,7 +13,7 @@ jobs:
     name: Check Dependency Match
     steps:
       - name: Check Dependency Match
-        uses: henrysha/check-dependency-match-action@v1
+        uses: henrysha/check-dependency-match-action@1.0.6
         with:
           dirA: { path_to_package }
           dirB: { path_to_package }
