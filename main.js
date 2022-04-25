@@ -1,4 +1,5 @@
 const core = require('@actions/core')
+const parser = require('action-input-parser')
 
 try {
   const dirA = core.getInput('dirA')
@@ -7,9 +8,7 @@ try {
   const dirAConfig = require(`${dirA}/package.json`)
   const dirBConfig = require(`${dirB}/package.json`)
 
-  const packages = core.getInput('packages') || []
-
-  if (typeof packages === 'string') throw new Error('packages must be array')
+  const packages = parser.getInput('packages', { type: 'array' }) || []
 
   packages.forEach((package) => {
     const packageA = dirAConfig.dependencies[package]

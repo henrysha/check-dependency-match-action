@@ -17,11 +17,14 @@ jobs:
         with:
           dirA: { path_to_package }
           dirB: { path_to_package }
-          packages: [{ package_to_check_version_match }]
+          packages: |
+            { package_to_check_version_match }
+            { package_to_check_version_match }
+            ...
 ```
 
 ### Inputs
 
 - `dirA`: path to package to check for dependency version
 - `dirB`: path to package to check for dependency version
-- `packages`: dependency names to check for version match. wrap into array.
+- `packages`: dependency names to check for version match. _split to newline for each package_
