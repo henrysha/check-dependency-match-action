@@ -21,7 +21,7 @@ try {
       !dirAConfig.dependencies[package] ||
       !dirBConfig.dependencies[package]
     ) {
-      core.info('package does not exist in one of the dependencies' + package)
+      core.info('package does not exist in one of the dependencies ' + package)
       return
     }
     const packageA = dirAConfig.dependencies[package]
